@@ -17,7 +17,8 @@ class NotNum(Exception):
         self.lst = lst
 
 
-num_char = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
+# вариант для положительных рациональных чисел
+num_char = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.')
 
 num_str = input('Введите несколько чисел, разделённых пробелами: ').split()
 nums = []
@@ -29,7 +30,7 @@ for el in num_str:
                 fl = False
                 raise NotNum(f'{el} - не число')
         if fl:
-            nums.append(int(el))
+            nums.append(float(el))
     except NotNum as err:
         print(err)
 

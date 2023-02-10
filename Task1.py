@@ -45,7 +45,8 @@ class Matrix:
         for i in range(len(self.my_list)):
             tmp_list = []
             for j in range(len(self.my_list[i])):
-                tmp_list.append(self.my_list[i][j] + other_matrix.my_list[i][j])
+                tmp_list.append(self.my_list[i][j] +
+                                other_matrix.my_list[i][j])
             out_matrix.append(tmp_list)
         return Matrix(out_matrix)
 
